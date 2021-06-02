@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+    />
+    <link rel="stylesheet" href="stylesheets/current.css" />
+    <title>Current Weather</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#home" class="nav__logo">RainyDay</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="uil uil-temperature-quarter nav__icon"></i> Current
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">
+                <i class="uil uil-corner-up-left-alt nav__icon"></i> Previous
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class="uil uil-clock nav__icon"></i> Hourly
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#projects" class="nav__link">
+                <i class="uil uil-calender nav__icon"></i> 7-day
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class="uil uil-newspaper nav__icon"></i> About
+              </a>
+            </li>
+          </ul>
+          <i class="uil uil-times nav__close" id="nav-close"></i>
+        </div>
+
+        <div class="nav__btns">
+          <!-- Change theme -->
+          <i class="uil uil-estate change-theme" id="theme-button"></i>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container center">
+      <p class="link">Current Weather</p>
+      <div class="search">
+        <form class="search-form">
+          <input
+            type="text"
+            id="input"
+            placeholder="Enter your zip code..."
+            name="zipCode"
+            minlength="5"
+            maxlength="5"
+            pattern="^\d{5}$"
+            title="Exactly 5 digits (e.g.: 12345)"
+            required
+          />
+          <input type="submit" value="Search" />
+        </form>
+      </div>
+
+      <div class="location">
+        <p class="city"><i class="uil uil-map-marker"></i>Philadelphia</p>
+      </div>
+
+      <div class="current">
+        <p class="wind">Wind</p>
+        <p class="rise">Rise</p>
+        <p class="set">Set</p>
+      </div>
+
+      <div class="data">
+        <p id="wind">9 mph</p>
+        <p id="sunrise">5:39 am</p>
+        <p id="sunset">8:20 pm</p>
+      </div>
+
+      <div class="temp">
+        <p class="temperature">55</p>
+        <p class="deg">&deg;</p>
+      </div>
+      <img src="images/foggy-weather-3311787-2754987.png" alt="" class="icon">
+      <p class="condition">Cloudy</p>
+    </div>
+
+    <script src="javascripts/current.js"></script>
+  </body>
+</html>
